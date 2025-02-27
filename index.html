@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع تعليمي</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+    <!-- Login Page -->
+    <div id="login-page">
+        <h2>تسجيل الدخول</h2>
+        <form id="login-form">
+            <label for="login-email">البريد الإلكتروني:</label>
+            <input type="email" id="login-email" name="login-email" required>
+
+            <label for="login-password">كلمة المرور:</label>
+            <input type="password" id="login-password" name="login-password" required>
+
+            <button type="submit">دخول</button>
+        </form>
+    </div>
+
+    <!-- Main Page (hidden initially) -->
+    <div id="main-page" style="display: none;">
+        <header>
+            <h1>10th GRADE</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">الصفحة الرئيسية</a></li>
+                    <li><a href="chat.html">المحادثة</a></li>
+                    <li><a href="#register">التسجيل</a></li>
+                    <li><a href="#files">الملفات</a></li>
+                    <li><a href="#audio">الأصوات</a></li>
+                    <li><a href="#video">الفيديوهات</a></li>
+                    <li><a href="#ar">عربي</a></li>
+                    <li><a href="#math">رياضيات</a></li>
+                    <li><a href="#physics">فيزياء</a></li>
+                    <li><a href="#chemistry">كيمياء</a></li>
+                    <li><a href="#biology">علوم أحياء</a></li>
+                    <li><a href="#french">فرنسي</a></li>
+                    <li><a href="#english">إنكليزي</a></li>
+                    <li><a href="#philosophy">فلسفة</a></li>
+                    <li><a href="#geography">جغرافيا</a></li>
+                    <li><a href="#history">تاريخ</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home">
+                <h2>مرحبًا بك في موقعكم التعليمي</h2>
+                <p>هنا يمكنك التواصل، التعلم، وأخذ الملفات بسهولة.</p>
+            </section>
+
+            <section id="chat">
+                <h2>المحادثة</h2>
+                <p>منطقة الدردشة هنا.</p>
+            </section>
+
+            <p>انضم إلى مجموعة واتساب من خلال الرابط التالي:</p>
+            <a id="whatsapp-link" href="https://chat.whatsapp.com/FCsP42lklCv2PXyBUVXKaH" target="_blank">انقر هنا للانضمام إلى المجموعة</a>
+
+            <section id="register">
+                <h2>التسجيل</h2>
+                <form id="registration-form">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="password">كلمة المرور:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <label for="phone">رقم الهاتف:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <button type="submit">تسجيل</button>
+                </form>
+            </section>
+
+            <!-- Additional sections for different subjects here... -->
+
+        </main>
+
+        <footer>
+            <p>© 2025 موقع  تعليمي. جميع الحقوق محفوظة.</p>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript to handle login
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            var email = document.getElementById("login-email").value;
+            var password = document.getElementById("login-password").value;
+
+            // Simple login validation (you can expand this with actual user validation)
+            if (email === "user@example.com" && password === "password123") {
+                // If login is successful, hide login page and show main page
+                document.getElementById("login-page").style.display = "none";
+                document.getElementById("main-page").style.display = "block";
+            } else {
+                alert("البريد الإلكتروني أو كلمة المرور غير صحيحة.");
+            }
+        });
+    </script>
+</body>
+</html>

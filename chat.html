@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دردشة</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <header>
+        <h1>دردشة الطلاب</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">الصفحة الرئيسية</a></li>
+                <li><a href="chat.html">المحادثة</a></li>
+                <li><a href="files.html">الملفات</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="chat">
+            <h2>غرفة الدردشة</h2>
+            <div id="messages"></div>
+            <form id="chat-form">
+                <input type="text" id="message" placeholder="اكتب رسالتك هنا..." required>
+                <input type="file" id="file-input" accept="image/*,video/*,audio/*">
+                <button type="submit">إرسال</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 تطبيق تعليمي. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="chat.js"></script>
+</body>
+</html>
